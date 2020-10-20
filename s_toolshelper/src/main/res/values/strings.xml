@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chars">λ ≤≥ ±℃λ √ppm rpm</string>
+    <string name="xila"> I II III IV V VI VII VIII IX X </string>
+    <string name="xunhuan">fori itor</string>
+</resources>
