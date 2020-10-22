@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.naruto.toolshelper" >
+    package="com.nathan96169.toolshelper" >
 
 <!--    蓝牙权限-->
     <uses-permission android:name="android.permission.BLUETOOTH" />
