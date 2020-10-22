@@ -2,8 +2,6 @@ package com.naruto.toolshelper;
 
 import android.app.ActivityManager;
 import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -12,8 +10,9 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.text.TextUtils;
 import android.text.format.Formatter;
-import android.util.Log;
 
+
+import com.naruto.toolshelper.dboperate.ODBHelper;
 
 import java.io.BufferedReader;
 import java.io.File;

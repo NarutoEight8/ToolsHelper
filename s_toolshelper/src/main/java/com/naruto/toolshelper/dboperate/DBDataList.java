@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.dboperate;
 
 public class DBDataList {
     public long serialNum;

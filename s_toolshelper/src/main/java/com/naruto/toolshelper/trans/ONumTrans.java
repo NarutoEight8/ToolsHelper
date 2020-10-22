@@ -1,4 +1,4 @@
-package com.naruto.toolshelper.datatypetrans;
+package com.naruto.toolshelper.trans;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;

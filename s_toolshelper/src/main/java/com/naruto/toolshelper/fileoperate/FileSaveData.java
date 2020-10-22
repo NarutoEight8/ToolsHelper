@@ -3,7 +3,7 @@ package com.naruto.toolshelper.fileoperate;
 import android.os.Environment;
 import android.util.Log;
 
-import com.naruto.toolshelper.datatypetrans.ODateTime;
+import com.naruto.toolshelper.trans.ODateTime;
 
 import java.io.File;
 import java.io.FileInputStream;

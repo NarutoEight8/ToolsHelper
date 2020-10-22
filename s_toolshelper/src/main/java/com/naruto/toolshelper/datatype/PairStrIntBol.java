@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.datatype;
 
 /**定长队列**/
 public class PairStrIntBol {

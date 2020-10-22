@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.encryption;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

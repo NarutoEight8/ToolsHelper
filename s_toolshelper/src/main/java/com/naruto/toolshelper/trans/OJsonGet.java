@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.trans;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

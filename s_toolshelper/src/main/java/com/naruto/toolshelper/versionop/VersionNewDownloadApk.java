@@ -1,13 +1,10 @@
-package com.naruto.toolshelper.fileoperate;
+package com.naruto.toolshelper.versionop;
 
 import android.app.DownloadManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageInstaller;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
@@ -16,18 +13,14 @@ import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.core.content.FileProvider;
 
 import com.naruto.toolshelper.GlobalInitBase;
+import com.naruto.toolshelper.fileoperate.LogMe;
+import com.naruto.toolshelper.fileoperate.UtilFileSave;
 
-import java.io.Closeable;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.Socket;
 
 /**
  * new VersionNewDownloadApk(context, appUrl, "***.apk");

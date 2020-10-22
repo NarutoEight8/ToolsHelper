@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.encryption;
 
 import android.util.Base64;
 
