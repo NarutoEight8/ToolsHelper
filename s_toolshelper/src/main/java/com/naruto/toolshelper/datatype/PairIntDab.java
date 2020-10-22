@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.datatype;
 
 /**配对值**/
 public class PairIntDab {

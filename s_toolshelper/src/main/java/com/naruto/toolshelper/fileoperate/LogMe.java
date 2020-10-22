@@ -6,7 +6,7 @@ import android.util.Log;
 
 
 import com.naruto.toolshelper.BuildConfig;
-import com.naruto.toolshelper.datatypetrans.ODateTime;
+import com.naruto.toolshelper.trans.ODateTime;
 import com.naruto.toolshelper.SystemMe;
 
 import java.io.BufferedWriter;

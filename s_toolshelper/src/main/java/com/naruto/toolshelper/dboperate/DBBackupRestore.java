@@ -1,13 +1,10 @@
 package com.naruto.toolshelper.dboperate;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Environment;
-import android.util.Log;
 
 import com.naruto.toolshelper.GlobalInitBase;
 import com.naruto.toolshelper.PermissionUtil;
-import com.naruto.toolshelper.datatypetrans.ODateTime;
 import com.naruto.toolshelper.fileoperate.LogMe;
 
 import java.io.File;

@@ -1,7 +1,6 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.dboperate;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -11,6 +10,8 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.naruto.toolshelper.GlobalInitBase;
+import com.naruto.toolshelper.SystemMe;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;

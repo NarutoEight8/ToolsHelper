@@ -1,9 +1,11 @@
-package com.naruto.toolshelper.fileoperate;
+package com.naruto.toolshelper.versionop;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInstaller;
+
+import com.naruto.toolshelper.fileoperate.LogMe;
 
 public class InstallResultReceiver extends BroadcastReceiver {
     @Override

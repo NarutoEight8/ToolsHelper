@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.datatype;
 
 import java.util.ArrayList;
 import java.util.Arrays;

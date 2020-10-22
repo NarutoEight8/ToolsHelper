@@ -1,7 +1,7 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.encryption;
 
 
-import com.naruto.toolshelper.datatypetrans.ByteHelper;
+import com.naruto.toolshelper.trans.ByteHelper;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

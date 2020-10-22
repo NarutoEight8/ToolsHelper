@@ -1,4 +1,4 @@
-package com.naruto.toolshelper;
+package com.naruto.toolshelper.trans;
 
 import android.widget.Button;
 import android.widget.EditText;
