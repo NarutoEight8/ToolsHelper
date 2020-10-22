@@ -20,7 +20,7 @@ task sourcesJar(type: Jar) {
 
 task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.sourceFiles
-    exclude "com/naruto/toolshelper","com/naruto/toolshelper","com/naruto/toolshelper"
+    exclude "com/nathan96169/toolshelper","com/nathan96169/toolshelper","com/nathan96169/toolshelper"
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     failOnError false
 }

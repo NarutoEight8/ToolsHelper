@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.naruto.toolshelper.ActivityUtils;
-import com.naruto.toolshelper.SystemMe;
+import com.nathan96169.toolshelper.ActivityUtils;
+import com.nathan96169.toolshelper.SystemMe;
 
 public class ActivityNext extends AppCompatActivity {
     private TextView txt_result,txt_name;

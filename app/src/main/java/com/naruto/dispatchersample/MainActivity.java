@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.naruto.toolshelper.ActivityUtils;
-import com.naruto.toolshelper.SystemMe;
+import com.nathan96169.toolshelper.ActivityUtils;
+import com.nathan96169.toolshelper.SystemMe;
 
 public class MainActivity extends AppCompatActivity {
     private TextView txt_result,txt_name;
