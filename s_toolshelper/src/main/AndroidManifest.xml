@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nathan96169.toolshelper" >
-
-<!--    蓝牙权限-->
+    <!--    蓝牙权限-->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -11,4 +10,18 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+<application>
+
+    <receiver
+        android:name=".versionop.VersionApkBroadCastReceiver"
+        android:enabled="true">
+        <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_ADDED" />
+            <action android:name="android.intent.action.PACKAGE_REPLACED" />
+            <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+            <data android:scheme="package" />
+        </intent-filter>
+    </receiver>
+</application>
 </manifest>
