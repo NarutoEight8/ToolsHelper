@@ -142,9 +142,9 @@ public class SystemMe {
     public static String getIPAddress(Context context) {
         NetworkInfo info = ((ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
         if (info != null && info.isConnected()) {
-            if (info.getType() == ConnectivityManager.TYPE_MOBILE) {//当前使用2G/3G/4G网络
+            if (info.getType() == ConnectivityManager.TYPE_MOBILE //当前使用2G/3G/4G网络
+                    || info.getType() == ConnectivityManager.TYPE_ETHERNET) {//当前使用有线网络
                 try {
-                    //Enumeration<NetworkInterface> en=NetworkInterface.getNetworkInterfaces();
                     for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements(); ) {
                         NetworkInterface intf = en.nextElement();
                         for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements(); ) {
@@ -157,7 +157,6 @@ public class SystemMe {
                 } catch (SocketException e) {
                     e.printStackTrace();
                 }
-
             } else if (info.getType() == ConnectivityManager.TYPE_WIFI) {//当前使用无线网络
                 WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
                 WifiInfo wifiInfo = wifiManager.getConnectionInfo();
