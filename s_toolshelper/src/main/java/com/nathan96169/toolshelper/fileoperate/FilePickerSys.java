@@ -21,7 +21,34 @@ import java.io.File;
 public class FilePickerSys {
     public static final int FILE_SELECT_REQUESTCODE = 8806;
     /***
-     * 需要加入 onActivityResult
+     * 1.执行方法
+     FilePickerSys.selectFile(resultActivity.getApplicationContext().getPackageName(),DBBackupRestore.BACKUP_DIC, resultActivity);
+     ODispatcher.addEventListener(OEventName.FILE_PICK_RESULT_BACK,this);
+     2.Activity
+
+     @Override
+     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+     super.onActivityResult(requestCode, resultCode, data);
+     if (resultCode == Activity.RESULT_OK && requestCode == FilePickerSys.FILE_SELECT_REQUESTCODE) {
+     Uri uri = data.getData();
+     ODispatcher.dispatchEvent(OEventName.FILE_PICK_RESULT_BACK,uri.getPath());
+     LogMe.showInDebug("文件路径："+uri.getPath());
+     }
+     }
+     3.处理事件
+
+     if (OEventName.FILE_PICK_RESULT_BACK.equals(eventName)) {
+     String filePath = (String) paramObj;
+     if(filePath.contains("/root"))filePath = filePath.replace("/root","");
+     try {
+     DBBackupRestore.doRestore(ODBHelper.getInstance().getDBName()+".db",filePath);
+     ToastTextShow.show("数据恢复成功!", GlobalInitBase.getCurrentActivity());
+     if(onRestoreFinListener!=null)onRestoreFinListener.onRestoreFin();
+     } catch (Exception e) {
+     LogMe.showInDebug(e.toString());
+     }
+     ODispatcher.removeEventListener(OEventName.FILE_PICK_RESULT_BACK,this);
+     }
      */
     public static void selectFile(String providerName,String dicPath,Activity resultActivity){
         //getUrl()获取文件目录，例如返回值为/storage/sdcard1/MIUI/music/mp3_hd/单色冰淇凌_单色凌.mp3

@@ -3,14 +3,12 @@ package com.naruto.dispatchersample;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.naruto.dispatchersample.databinding.ActivityMainBinding;
 import com.nathan96169.toolshelper.GlobalInitBase;
@@ -82,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
         binding.btnCopy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BackupTask.dataBackup(MainActivity.this);
+//                BackupTask.dataBackup(MainActivity.this);
             }
         });
         binding.btnRestore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BackupTask.dataRecover(MainActivity.this);
+//                BackupTask.dataRecover(MainActivity.this);
             }
         });
         binding.btnSave.setOnClickListener(new View.OnClickListener() {

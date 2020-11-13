@@ -4,10 +4,8 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
-
-import com.nathan96169.toolshelper.BuildConfig;
-import com.nathan96169.toolshelper.trans.ODateTime;
 import com.nathan96169.toolshelper.SystemMe;
+import com.nathan96169.toolshelper.trans.ODateTime;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -30,7 +28,7 @@ public class LogMe {
         return isEnableSaveLogFull;
     }
     public static void showInDebug(String log){
-        if(BuildConfig.DEBUG)Log.e("D",log);
+        Log.e("D",log);
     }
     public static void showInAll(String log){
         Log.e("A",log);
