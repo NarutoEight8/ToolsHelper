@@ -1,10 +1,9 @@
 package com.nathan96169.toolshelper.trans;
 
-import android.text.TextUtils;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.nathan96169.toolshelper.SystemMe;
 
 public class OJsonGet {
 
@@ -26,8 +25,12 @@ public class OJsonGet {
 		try {
 			JsonElement value = object.get(name);
 			if(value == null)return "";
-			String result = value.getAsString();
-			if(TextUtils.isEmpty(result))result = value.toString();
+			String result = "";
+			if(value.isJsonArray() || value.isJsonObject()){
+				result = new String(value.toString().getBytes(SystemMe.UTF8), SystemMe.UTF8);
+			}else{
+				result = value.getAsString();
+			}
 			return result;
 		} catch (Exception e) {
 			return "";
