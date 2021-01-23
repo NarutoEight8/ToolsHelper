@@ -1,6 +1,9 @@
 package com.nathan96169.toolshelper.trans;
 
+import android.text.TextUtils;
+
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 public class OJsonGet {
@@ -21,7 +24,11 @@ public class OJsonGet {
 	}
 	public static String getString(JsonObject object, String name){
 		try {
-			return object.get(name).getAsString();
+			JsonElement value = object.get(name);
+			if(value == null)return "";
+			String result = value.getAsString();
+			if(TextUtils.isEmpty(result))result = value.toString();
+			return result;
 		} catch (Exception e) {
 			return "";
 		}
